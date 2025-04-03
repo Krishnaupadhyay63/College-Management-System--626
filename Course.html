@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course</title>
+    <link rel="stylesheet" href="/Course.css">
+
+    <style>
+        table{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+        }
+
+        td{
+            padding: 15px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        tr{
+            text-align: center;
+            border: 2px solid black;
+        }
+
+        th{
+            padding: 15px;
+            border: 2px solid black;
+            font-size: 20px;
+        }
+
+        span{
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <a href="/Home.html"><img src="/IMAGES/logo1.png" alt=""></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="/Home.html">Home</a></li>
+                    <li><a href="/About.html">About</a></li>
+                    <li><a href="/Course.html">Course</a></li>
+                    <li><a href="/Registration.html">Registration</a></li>
+                    <li><a href="/Login.html">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="content">
+        <div class="info">
+            <h1>Explore Our Programs</h1>
+            <br>
+             <p>Your academic journey at University offers you endless opportunities to shape and grow your career, through a blend of the most enriching programs to choose from. Each program has been equipped with cutting-edge facilities and top-notch professors to ensure the finest exposure to excellence in education. As a NAAC Grade A++ accredited university,University provides the most enriching exposure to quality education through research, innovation, internationalization, student welfare and quality academics.</p>
+        </div>
+        <div class="content-image">
+            <img src="/IMAGES/course1.jpg" alt="">
+        </div>
+    </div>
+
+
+    <h2>Our Course</h2>
+    <div class="courses">
+        <div class="course-card">
+          <h3>Undergraduate</h3>
+          <p>Explore our undergraduate programs designed to build a strong foundation for your career.</p>
+          <button class="view-more">View More</button>
+        </div>
+        <div class="course-card">
+          <h3>Postgraduate</h3>
+          <p>Advance your knowledge with our postgraduate programs tailored for industry relevance.</p>
+          <button class="click">View More</button>
+        </div>
+        <div class="course-card">
+          <h3>Diploma</h3>
+          <p>Enhance your skills with our diploma programs across various disciplines.</p>
+          <button class="click1">View More</button>
+        </div>
+      </div>
+      <p id="xml"></p>
+      <p id="json"></p>
+      <p id="text"></p>
+    <footer>
+        <div class="footer">
+            <div class="footer-c">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Course</a></li>
+                    <li><a href="#">Faculty</a></li>
+                    <li><a href="#">Visit us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="footer-c">
+                <ul>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">Admission</a></li>
+                    <li><a href="#">Acedemics</a></li>
+                    <li><a href="#">System Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-c">
+                <ul>
+                    <li><a href="#">Allumni</a></li>
+                    <li><a href="#">Our team</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-end">
+            &copy; 2025 All Rights Reserved by Pune University
+        </div>
+    </footer>
+
+    <script src="/jquery-3.7.1.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".view-more").click(function(){
+                let data = new XMLHttpRequest();
+                data.open("GET","ugcourse.xml");
+                data.send();
+                data.onreadystatechange = function(){
+                    if(this.readyState == 4)
+                    {
+                        var e_data="";
+                        e_data += "<span>UG Programs</span>"
+                        e_data+='<table border=2>';
+                        e_data+="<tr><th>Course</th><th>Instructor</th><th>Duration</th><th>Course Description</th></tr>"
+                        $(this.responseXML).find("data1").each(function(){
+                            e_data+='<tr>';
+                            e_data+='<td>'+$(this).find("course").text()+'</td>';
+                            e_data+='<td>'+$(this).find("instructor").text()+'</td>';
+                            e_data+='<td>'+$(this).find("duration").text()+'</td>';
+                            e_data+='<td>'+$(this).find("courseDesc").text()+'</td>';
+                            e_data+='</tr>';
+                        })
+                        e_data+='</table>';
+                        document.getElementById("xml").innerHTML = e_data;
+                    }
+                }
+            })
+        })
+
+            // json data
+
+$(document).ready(function(){
+      $(".click").click(function(){
+    let xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function(){
+    if(this.readyState == 4){
+        var data = JSON.parse(this.responseText);
+        myfunc(data);
+    }
+}
+    xhr.open("GET","pgcourse.json");
+    xhr.send();
+}) 
+})
+
+function myfunc(data){
+    let event_data = "";
+    event_data += "<span>PG Programs</span>"
+    event_data +='<table border=2>';
+    event_data+="<tr><th>Course</th><th>Instructor</th><th>Duration</th><th>Course Description</th></tr>"
+    for (i in data.data1){
+        event_data+='<tr>';
+        event_data += '<td>'+ data.data1[i].course + '</td>'; 
+        event_data += '<td>'+ data.data1[i].instructor + '</td>';   
+        event_data += '<td>'+ data.data1[i].duration + '</td>';
+        event_data += '<td>'+ data.data1[i].courseDesc + '</td>';
+        event_data+='</tr>';
+    }
+    event_data +='</table>';
+    document.getElementById("xml").innerHTML = event_data;
+}
+</script>
+
+<script>
+        $(document).ready(function(){
+            $(".click1").click(function(){
+                let data = new XMLHttpRequest();
+                data.open("GET","dlcourse.xml");
+                data.send();
+                data.onreadystatechange = function(){
+                    if(this.readyState == 4)
+                    {
+                        var e_data="";
+                        e_data += "<span>Diploma Programs</span>"
+                        e_data+='<table border=2>';
+                        e_data+="<tr><th>Course</th><th>Instructor</th><th>Duration</th><th>Course Description</th></tr>"
+                        $(this.responseXML).find("data2").each(function(){
+                            e_data+='<tr>';
+                            e_data+='<td>'+$(this).find("course").text()+'</td>';
+                            e_data+='<td>'+$(this).find("instructor").text()+'</td>';
+                            e_data+='<td>'+$(this).find("duration").text()+'</td>';
+                            e_data+='<td>'+$(this).find("courseDesc").text()+'</td>';
+                            e_data+='<tr>';
+                        })
+                        e_data+='</table>';
+                        document.getElementById("xml").innerHTML = e_data;
+                    }
+                }
+            })
+        })
+
+        $(document).ready(function(){
+            $(".info").dblclick(function(){
+                 $(".info").slideUp(1000);
+            });
+
+            $(".info").dblclick(function(){
+                 $(".info").slideDown(2000);
+            });
+        });
+</script>
+</body>
+</html>

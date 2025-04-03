@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="/Registration.css" />
+  </head>
+  <body>
+    <center>
+    <header class="header">
+      <nav>
+          <a href="/Home.html"><img src="/IMAGES/logo1.png" alt=""></a>
+          <div class="nav-links">
+              <ul>
+                  <li><a href="/Home.html">Home</a></li>
+                  <li><a href="/About.html">About</a></li>
+                  <li><a href="/Course.html">Course</a></li>
+                  <li><a href="/Registration.html">Registration</a></li>
+                  <li><a href="/Login.html">Login</a></li>
+              </ul>
+          </div>
+      </nav>
+  </header>
+  </center>
+
+  <!-- //Registration -->
+  <center><h1>Registration</h1></center>
+
+  <center>
+ <div class="main" id="list_table">
+     <form action="" id="form" >
+         <div id="field">
+          <div class="label">
+         <label for="">Name:</label>
+      </div>
+         <br>
+         <input type="text" class="name" placeholder="Enter Your Name"><br><p id="ferror"></p>
+         <br>
+         <br>
+         </div>
+
+         <div id="field">
+          <div class="label">
+         <label for="">Mo Number:</label>
+      </div>
+         <br>
+         <input class="number" placeholder="Enter Your Number"><p id="perror"></p>
+         <br>
+         <br>
+         </div>
+
+         <div id="field"> 
+          <div class="label">
+         <label for="">Date of Birth:</label>
+         </div>
+         <br>
+         <input type="date" class="date"><p id="derror"></p>
+         <br>
+         <br>
+         </div>
+
+         <div id="field">
+          <div class="label">
+         <label for="">Email:</label>
+      </div>
+         <br>
+         <input type="email" class="email"  placeholder="Enter Your Email"><p id="eerror"></p>
+         <br>
+         <br>
+         </div>
+
+         <div id="field">
+          <div class="label">
+         <label for="course">Stream:</label>
+         </div>
+         <br>
+         <select class="select">
+             <option>BCA</option>
+             <option>BBA</option>
+             <option>B.COM</option>
+             <option>BSc</option>
+             <option>MCA</option>
+             <option>MBA</option>
+         </select><p id="serror"></p>
+         <br>
+         <br>
+         </div>
+
+         <div id="field">
+          <div class="label">
+         <label for="">Password:</label>
+      </div>
+         <br>
+         <input type="password" class="pwd"  placeholder="Enter Your Password"><p id="merror"></p>
+         <br>
+         <br>
+        </div>
+
+         <div id="field">
+          <div class="label">
+         <label for="">Confirm Password:</label>
+      </div>
+         <br>
+         <input type="password" class="pwd1"  placeholder="Enter Your Confirm Password"><p id="cerror"></p>
+         <br>
+         <br>
+        </div>
+
+         <input type="button" class="btn" value="Register" id="btn" >
+     </form>
+ </div>
+ </center>
+
+    <footer>
+      <div class="footer">
+          <div class="footer-c">
+              <ul>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Course</a></li>
+                  <li><a href="#">Faculty</a></li>
+                  <li><a href="#">Visit us</a></li>
+                  <li><a href="#">Contact us</a></li>
+              </ul>
+          </div>
+          <div class="footer-c">
+              <ul>
+                  <li><a href="#">Career</a></li>
+                  <li><a href="#">Admission</a></li>
+                  <li><a href="#">Acedemics</a></li>
+                  <li><a href="#">System Support</a></li>
+              </ul>
+          </div>
+          <div class="footer-c">
+              <ul>
+                  <li><a href="#">Allumni</a></li>
+                  <li><a href="#">Our team</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="footer-end">
+          &copy; 2025 All Rights Reserved by Pune University
+      </div>
+  </footer>
+  
+    <script src="/jquery-3.7.1.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#btn").click(function (event) {
+          let isValid = true;
+          //fname
+          if ($(".name").val() == "") {
+            $("#ferror").text("Name is requird");
+
+            isValid = false;
+          }
+
+          $(".name").on("change", function () {
+            if ($(".name").length >= 1) {
+              $("#ferror").text("");
+            } else {
+              $("#ferror").text("First name is requird");
+            }
+          });
+
+          //number
+          if ($(".number").val() == "") {
+            $("#perror").text("Number is requird");  
+            isValid = false;
+          }
+
+          $(".number").on("change", function () {
+            if ($(".number").length >= 1) {
+              $("#perror").text("");
+            } else {
+              $("#perror").text("Number is requird");
+            }
+          });
+
+          //date
+          if ($(".date").val() == "") {
+            $("#derror").text("Date is requird");
+
+            isValid = false;
+          }
+
+          $(".date").on("change", function () {
+            if ($(".date").length >= 1) {
+              $("#derror").text("");
+            } else {
+              $("#derror").text("Date is  requird");
+            }
+          });
+
+          //email
+          if ($(".email").val() == "") {
+            $("#eerror").text("Email is requird");
+            isValid = false;
+          }
+
+          $(".email").on("change", function () {
+            if ($(".email").length >= 1) {
+              $("#eerror").text("");
+            } else {
+              $("#eerror").text("Email is requird");
+            }
+          });
+
+          //city
+          if ($(".select").val() == "") {
+            $("#serror").text("City's selection is requird");
+
+            isValid = false;
+          }
+
+          //password
+          if ($(".pwd").val() == "") {
+            $("#merror").text("Password is requird"); 
+            isValid = false; 
+          }
+
+          $(".pwd").on("change", function () {
+            if ($(".pwd").length >= 1) {
+              $("#merror").text("");
+            } else {
+              $("#merror").text("Password is requird");
+            }
+          });
+
+          //confirm password
+          if ($(".pwd1").val() == "") {
+            $("#cerror").text("Confirm Password is requird");
+
+            isValid = false;
+          }
+
+          $(".pwd1").on("change", function () {
+            if ($(".pwd1").length >= 1) {
+              $("#cerror").text("");
+            } else {
+              $("#cerror").text("Confirm Password is requird");
+            }
+          });
+
+          if (!isVlaid) {
+            event.preventDefault();
+          }
+        });
+      });
+
+      $(document).ready(function () {
+        $(".name").on("keypress", function (e) {
+          let char = String.fromCharCode(e.which);
+          let pattern = /^[a-zA-Z\s]+$/;
+
+          if (!pattern.test(char)) {
+            alert("Only Character [A-Z or a-z] is allowed");
+            e.preventDefault();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

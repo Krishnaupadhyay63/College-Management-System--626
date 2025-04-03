@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/Home.css">
+    <!-- <link rel="stylesheet" href="/bootstrap.min.css"> -->
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <a href="/Home.html"><img src="/IMAGES/logo1.png" alt=""></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="/Home.html">Home</a></li>
+                    <li><a href="/About.html">About</a></li>
+                    <li><a href="/Course.html">Course</a></li>
+                    <li><a href="/Registration.html">Registration</a></li>
+                    <li><a href="/Login.html">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="sp">
+        <div id="hero">
+            <div id="hero-contain">
+                <h1>An Enriching Learning Place!</h1>
+                <b><p>We Ensure That Student's Can Take Great Success & Opportunities</p></b>
+                <p><a href="#" class="k-more">Know More!!</a>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <div class="header1">
+        <h1>A Vibrant University Experience</h1>
+        <p>India's leading private university with a strong foundation established in 2015.</p>
+    </div>
+    <div class="content">
+        <div class="info">
+            <b><p>A multidisciplinary destination of learning and innovation, propelling quality in higher education with a record of being India's youngest private university to receive NAAC A++ accreditation in the first cycle. Situated in Pune,Maharashtra.</p></b>
+            <br>
+            <b><p>The University offers diploma, undergraduate, postgraduate, and doctoral programs across numerous disciplines. Through its uniquely structured, industry-linked, and field-aligned programs, the University fulfills students' dreams by launching lucrative careers through start-up incubation and placement records.</p></b>
+            <br>
+            <b><p>It has also been recognized as the Best Private University in Western India and Best University in Placements by ASSOCHAM and others.</p></b><br>
+        </div>
+        <div class="content-image">
+            <img src="/IMAGES/Home2.jpg" alt="">
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-c">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Course</a></li>
+                    <li><a href="#">Faculty</a></li>
+                    <li><a href="#">Visit us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="footer-c">
+                <ul>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">Admission</a></li>
+                    <li><a href="#">Acedemics</a></li>
+                    <li><a href="#">System Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-c">
+                <ul>
+                    <li><a href="#">Allumni</a></li>
+                    <li><a href="#">Our team</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-end">
+            &copy; 2025 All Rights Reserved by Pune University
+        </div>
+    </footer>
+
+    <script src="/jquery-3.7.1.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".k-more").mousedown(function(){
+                $(this).css({"background-color": "white","color":"black"})
+            })
+
+            $(".k-more").mouseup(function(){
+                $(this).css({"background-color": "black","color":"whitesmoke"})
+            })
+
+            $(".header1").mousemove(function(){
+                $(this).fadeTo("slow",0.65);
+            })
+
+            $(".info").click(function(){
+                $(".info").append('<b><p>Presenting state of art infrastructure with high quality and energized work ethics.</b></p>');
+            })
+
+            $(".info").click(function(){
+                $(".info").prepend('<b><p>Bridging the gap between academia and career, by paying emphasis on development programs for both students and staff.</b></p><br>');
+            })
+
+
+        })
+    </script>
+</body>
+</html>

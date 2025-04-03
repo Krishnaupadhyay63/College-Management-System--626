@@ -1,0 +1,52 @@
+<data>
+
+    <data2>
+    <course>D.Eng</course>
+    <instructor>Bhadresh</instructor>
+    <duration>4 years</duration>
+    <courseDesc>A brief overview of Diploma in Engineering</courseDesc>
+    </data2>
+
+    <data2>
+    <course>D.Pharm</course>
+    <instructor>Bhautik</instructor>
+    <duration>4 years</duration>
+    <courseDesc>A brief overview of Diploma in Pharmacy</courseDesc>
+    </data2>
+
+    <data2>
+    <course>D.Arch</course>
+    <instructor>Nainesh</instructor>
+    <duration>4 years</duration>
+    <courseDesc>A brief overview of Diploma in Architecture</courseDesc>
+    </data2>
+
+    <data2>
+    <course>DPA</course>
+    <instructor>Krishna</instructor>
+    <duration>4 years</duration>
+    <courseDesc>A brief overview of Diploma in Performing Arts</courseDesc>
+    </data2>
+
+    <data2>
+    <course>DHMCT</course>
+    <instructor>Fenil</instructor>
+    <duration>4 years</duration>
+    <courseDesc>A brief overview of Diploma in Hotel Management and Catering Technology</courseDesc>
+    </data2>
+
+    <data2>
+    <course>D.Des</course>
+    <instructor>Krushil</instructor>
+    <duration>4 years</duration>
+    <courseDesc>A brief overview of Diploma in Design</courseDesc>
+    </data2>
+
+    <data2>
+    <course>DCE</course>
+    <instructor>Meet</instructor>
+    <duration>4 years</duration>
+    <courseDesc>A brief overview of Diploma in Computer Engineering</courseDesc>
+    </data2>
+
+</data>

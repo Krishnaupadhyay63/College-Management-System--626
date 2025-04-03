@@ -1,0 +1,73 @@
+<data>
+
+    <data1>
+    <course>BCA</course>
+    <instructor>Bhadresh</instructor>
+    <duration>3 years</duration>
+    <courseDesc>A brief overview of bachelor of computer application</courseDesc>
+    </data1>
+
+    <data1>
+    <course>BBA</course>
+    <instructor>Bhautik</instructor>
+    <duration>3 years</duration>
+    <courseDesc>A brief overview of bachelor of business administration</courseDesc>
+    </data1>
+
+    <data1>
+    <course>Bcom</course>
+    <instructor>Nainesh</instructor>
+    <duration>3 years</duration>
+    <courseDesc>A brief overview of bachelor of commerce</courseDesc>
+    </data1>
+
+    <data1>
+    <course>BTech</course>
+    <instructor>Krishna</instructor>
+    <duration>4 years</duration>
+    <courseDesc>A brief overview of bachelor of technology</courseDesc>
+    </data1>
+
+    <data1>
+    <course>Bsc</course>
+    <instructor>Fenil</instructor>
+    <duration>4 years</duration>
+    <courseDesc>A brief overview of bachelor of science</courseDesc>
+    </data1>
+
+    <data1>
+    <course>BA</course>
+    <instructor>Krushil</instructor>
+    <duration>3 years</duration>
+    <courseDesc>A brief overview of bachelor of Arts</courseDesc>
+    </data1>
+
+    <data1>
+    <course>B.Des</course>
+    <instructor>Meet</instructor>
+    <duration>4 years</duration>
+    <courseDesc>A brief overview of bachelor of Design</courseDesc>
+    </data1>
+
+    <data1>
+    <course>B.Pharm</course>
+    <instructor>Masum</instructor>
+    <duration>4 years</duration>
+    <courseDesc>A brief overview of bachelor of Pharmacy</courseDesc>
+    </data1>
+
+    <data1>
+    <course>Bsc IT</course>
+    <instructor>Prince</instructor>
+    <duration>3 years</duration>
+    <courseDesc>A brief overview of bachelor of science in information technology</courseDesc>
+    </data1>
+
+    <data1>
+    <course>B.Arch</course>
+    <instructor>Axit</instructor>
+    <duration>4 years</duration>
+    <courseDesc>A brief overview of bachelor of Architecture</courseDesc>
+    </data1>
+
+</data>

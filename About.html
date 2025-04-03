@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <link rel="stylesheet" href="/About.css">
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <a href="/Home.html"><img src="/IMAGES/logo1.png" alt=""></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="/Home.html">Home</a></li>
+                    <li><a href="/About.html">About</a></li>
+                    <li><a href="/Course.html">Course</a></li>
+                    <li><a href="/Registration.html">Registration</a></li>
+                    <li><a href="/Login.html">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="about-content">
+        <h2>Our identity</h2>
+        <p>Pune University is a hub of educational innovation and excellence, fostering academic growth and personal development. Our commitment to delivering world-class education has positioned us as one of India's leading private universities.</p>
+        <div class="about-highlights">
+            <div class="highlight">
+                <h3>Innovation in Education</h3>
+                <p>We integrate modern practices with traditional knowledge to offer a holistic learning experience.</p>
+            </div>
+            <div class="highlight">
+                <h3>Global Community</h3>
+                <p>Our campus hosts students from 75+ countries, creating a culturally rich and inclusive environment.</p>
+            </div>
+            <div class="highlight">
+                <h3>Research & Development</h3>
+                <p>Committed to advancing knowledge through cutting-edge research and innovation.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mission-section">
+        <div class="mission-text">
+            <h2 id="h2">Our Mission & Vision</h2>
+            <ul>
+                <li>Bridging the gap between academia and career, by paying emphasis on development programs for both students and staff.</li>
+                <li>Promoting healthy relationships between University’s existing students, alumni, teachers and staff.</li>
+                <li>Forming associations with other universities and corporate firms of the nation and the world.</li>
+                <li>Presenting state-of-the-art infrastructure with high quality and energized work ethics.</li>
+            </ul>
+        </div>
+        <div class="mission-image">
+            <img src="/IMAGES/vision1.jpg" alt="University Campus">
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-c">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Course</a></li>
+                    <li><a href="#">Faculty</a></li>
+                    <li><a href="#">Visit us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="footer-c">
+                <ul>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">Admission</a></li>
+                    <li><a href="#">Acedemics</a></li>
+                    <li><a href="#">System Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-c">
+                <ul>
+                    <li><a href="#">Allumni</a></li>
+                    <li><a href="#">Our team</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-end">
+            &copy; 2025 All Rights Reserved by Pune University
+        </div>
+    </footer>
+
+    
+
+    <script src="/jquery-3.7.1.js"></script>
+
+    <script>
+        $(document).ready(function(){
+           $(".highlight").mouseenter(function(){
+            $(this).css({"transform":"translateY(-15px)","box-shadow": "0 0 10px rgba(0, 0, 0, 10)","transition":" 0.75s all ease-in"})
+           })
+
+           $(".highlight").mouseleave(function(){
+            $(this).css({"transform":"translateY(0px)","box-shadow": "0 0 10px rgba(0, 0, 0, 0.2)"})
+           })
+
+           $("#h2").mouseover(function(){
+            $(this).css("border-bottom","3px solid black")
+           })
+
+           $("#h2").mouseout(function(){
+            $(this).css("border-bottom","none")
+           })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+{
+    "data1":[
+    {
+     "course":"MCA",
+     "instructor":"Bhadresh",
+     "duration":"2 years",
+     "courseDesc":"A brief overview of Master of computer application"
+    },
+
+        {
+        "course":"MBA",
+        "instructor":"Bhautik",
+        "duration":"2 years",
+        "courseDesc":"A brief overview of Master of Business Administration"
+       },
+
+       {
+        "course":"Mcom",
+        "instructor":"Nainesh",
+        "duration":"2 years",
+        "courseDesc":"A brief overview of Master of Commerce"
+       },
+
+       {
+        "course":"MTech",
+        "instructor":"Krishna",
+        "duration":"1 years",
+        "courseDesc":"A brief overview of Master of Techonolgy"
+       },
+
+       {
+        "course":"Msc",
+        "instructor":"Fenil",
+        "duration":"1 years",
+        "courseDesc":"A brief overview of Master of Science"
+       },
+
+       {
+        "course":"M.Pharm",
+        "instructor":"Masum",
+        "duration":"1 years",
+        "courseDesc":"A brief overview of Master of Pharmacy"
+       },
+
+       {
+        "course":"Msc IT",
+        "instructor":"Prince",
+        "duration":"2 years",
+        "courseDesc":"A brief overview of Master of Science in information technology"
+       },
+
+       {
+        "course":"LLM",
+        "instructor":"Axit",
+        "duration":"2 years",
+        "courseDesc":"A brief overview of Master of Laws"
+       }
+]}
